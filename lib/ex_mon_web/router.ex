@@ -23,5 +23,6 @@ defmodule ExMonWeb.Router do
     pipe_through :api
 
     get "/", WelcomeController, :index
+    resources "/trainers", TrainersController, only: [:create, :show, :delete, :update]
   end
 end
